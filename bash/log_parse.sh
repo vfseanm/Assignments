@@ -1,7 +1,12 @@
 #!/bin/bash
 
+<<<<<<< HEAD
 echo "Decompressing..."
 #bunzip2 -k chronline.2013.08.27.bz2
+=======
+bunzip2 -k chronline.2013.08.27.bz2
+
+>>>>>>> 778a4fa6f29a0a16c030e6224c82535bed5e8d9c
 grep 'Started GET' chronline.2013.08.27 |
 sed 's/.*Started GET ".*" for \([0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\).*/\1/' |
 sort > addresses
