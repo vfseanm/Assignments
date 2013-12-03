@@ -18,17 +18,27 @@
     (else
       (let* ((pivot (car lst))
         (less-than? (lambda (x) (<= x pivot)))
-        (greater-than? (lambda (x) (> x pivot))))
+        ((greater-than? (lambda (x) (> x pivot))))))
       (append
         (qsort (filter less-than? (cdr lst)))
         (cons pivot '())
-        (qsort (filter greater-than? (cdr lst))))))))
+        (qsort (filter greater-than? (cdr lst)))))))
 
 ;; Reverse the list
 (define (reverse lst) 
   (foldl cons '() lst))
 
  
+;; Check if n is prime
+(define (prime? n)
+(and (> n 1)
+  (foldl (lambda (x init))
+	 (and init
+	      (> (modulo x init ) 0 )))
+	 true
+	 (range 2 (sqrt n))))
+
+
 
 ;; Find maximum element of list using > operator
 (define (maximum lst)
