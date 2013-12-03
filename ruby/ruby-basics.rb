@@ -50,14 +50,3 @@ array[i] = array[rando]
 array[rando] = temp
 }
 end
-
-##
-# Perform a Rot13 transformation on a string.
-#
-def rot13(string)
-
-end
-
-def query_classes(data, criteria)
-
-end
