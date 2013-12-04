@@ -44,20 +44,16 @@
   (cond
    (( < n 10) n )
    (else
-    (* (module n 10) (product-of-digits (quotient n 10))))))
+    (* (modulo n 10) (product-of-digits (quotient n 10))))))
 
 
 ;; Find the greatest number which is the product of the digits of a prime less than n
-(define (greatest-prime-digit-product n)
-  ( maximum (map product-of-digits( (filter prime? (range 1 10000000))))))
- 
+;; I don't have the range function so this doesnt work :( 
 
 
 
 (provide
  fibonacci
  qsort
- prime?
  maximum
- product-of-digits
- greatest-prime-digit-product)
+ product-of-digits)

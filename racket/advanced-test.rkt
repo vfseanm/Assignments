@@ -25,21 +25,6 @@
  (check-equal? (reverse '(a)) '(a))
  (check-equal? (reverse '(a b c d)) '(d c b a)))
 
-(test-case
- "prime?"
- (check-false (prime? 1))
- (check-true (prime? 2))
- (check-true (prime? 3))
- (check-false (prime? 4))
- (check-false (prime? 91))
- (check-true (prime? 109)))
-
-(test-case
- "product-of-digits"
- (check-equal? (product-of-digits 0) 0)
- (check-equal? (product-of-digits 6) 6)
- (check-equal? (product-of-digits 123) 6)
- (check-equal? (product-of-digits 99) 81))
 
 (test-case
  "maximum"
